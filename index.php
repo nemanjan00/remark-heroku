@@ -11,6 +11,7 @@ $_SERVER['REQUEST_URI'] = htmlentities($_SERVER['REQUEST_URI'])."?".time();
 		<title>Osnove web tehnologija</title>
 		<meta charset="utf-8">
 		<style>
+			@import url(https://fonts.googleapis.com/css?family=BenchNine&subset=latin,latin-ext);
 			@import url(https://fonts.googleapis.com/css?family=Droid+Serif);
 			@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
 			@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
@@ -19,7 +20,8 @@ $_SERVER['REQUEST_URI'] = htmlentities($_SERVER['REQUEST_URI'])."?".time();
 				font-family: 'Droid Serif';
 			}
 			h1, h2, h3 {
-				font-family: 'Yanone Kaffeesatz';
+				/*font-family: 'Yanone Kaffeesatz';*/
+				font-family: 'BenchNine', sans-serif;
 				font-weight: 400;
 				margin-bottom: 0;
 			}
