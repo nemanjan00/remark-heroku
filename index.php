@@ -3,7 +3,7 @@ if($_SERVER['REQUEST_URI'] == "" || $_SERVER['REQUEST_URI'] == "/"){
 	header("location: /01-uvod.markdown");
 }
 
-$_SERVER['REQUEST_URI'] = htmlentities($_SERVER['REQUEST_URI']);
+$_SERVER['REQUEST_URI'] = htmlentities($_SERVER['REQUEST_URI'])."?".time();
 ?>
 <!DOCTYPE html>
 <html>
