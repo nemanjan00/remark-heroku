@@ -123,6 +123,10 @@ $_SERVER['REQUEST_URI'] = htmlentities($_SERVER['REQUEST_URI'])."?".time();
 				float: right;
 				padding-top: 1em;
 			}
+
+			#source {
+				display: none; 
+			}
 		</style>
 	</head>
 	<body>
