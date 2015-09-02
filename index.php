@@ -27,6 +27,10 @@ $_SERVER['REQUEST_URI'] = htmlentities($_SERVER['REQUEST_URI'])."?".time();
 				color: #777872;
 				text-shadow: 0 0 20px #333;
 			}
+
+			.inverse h1 {
+				color: #F3F3F3;
+			}
 		</style>
 	</head>
 	<body>

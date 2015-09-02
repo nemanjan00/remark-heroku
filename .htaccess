@@ -1,0 +1,27 @@
+<IfModule mod_setenvif.c>
+  <IfModule mod_headers.c>
+	<FilesMatch "\.(gif|png|jpe?g|svg|svgz|ico|webp)$">
+	  SetEnvIf Origin ":" IS_CORS
+	  Header set Access-Control-Allow-Origin "*" env=IS_CORS
+	</FilesMatch>
+  </IfModule>
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(ttf|ttc|otf|eot|woff|font.css|css)$">
+	Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+</IfModule>
+
+RewriteEngine on
+#RewriteBase /
+
+# Ignore /admin
+RewriteRule ^admin - [L]
+
+# only rewrite if the requested file doesn't exist
+RewriteCond %{REQUEST_FILENAME} !-s
+
+# pass the rest of the request into index.php to handle
+RewriteRule ^(.*)$ index.php/$1
+
