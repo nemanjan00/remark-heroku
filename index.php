@@ -21,6 +21,12 @@ $_SERVER['REQUEST_URI'] = htmlentities($_SERVER['REQUEST_URI']);
 				font-weight: normal;
 			}
 			.remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }*/
+
+			.inverse {
+				background: #272822;
+				color: #777872;
+				text-shadow: 0 0 20px #333;
+			}
 		</style>
 	</head>
 	<body>
