@@ -47,9 +47,11 @@ class: center, middle
 		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 		<script>
 
-$.get("https://rawgit.com/nemanjan00/osnove-web-tehnologija/master/<?=$_SERVER['REQUEST_URI'];?>", function(data) {
+			$.get("https://rawgit.com/nemanjan00/osnove-web-tehnologija/master/<?=$_SERVER['REQUEST_URI'];?>", function(data) {
 				$("#source").text(data);
 				var slideshow = remark.create();
+			}).fail(function() {
+				window.location = "/";
 			});
 
 		</script>
