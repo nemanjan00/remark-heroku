@@ -1,7 +1,14 @@
+<?php
+if($_SERVER['REQUEST_URI'] == "" || $_SERVER['REQUEST_URI'] == "/"){
+	header("location: /01-uvod.markdown");
+}
+
+$_SERVER['REQUEST_URI'] = htmlentities($_SERVER['REQUEST_URI']);
+?>
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Title</title>
+		<title>Osnove web tehnologija</title>
 		<meta charset="utf-8">
 		<style>
 			/*@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
@@ -40,7 +47,7 @@ class: center, middle
 		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 		<script>
 
-			$.get("https://rawgit.com/nemanjan00/osnove-web-tehnologija/master/01-uvod.markdown", function(data) {
+$.get("https://rawgit.com/nemanjan00/osnove-web-tehnologija/master/<?=$_SERVER['REQUEST_URI'];?>", function(data) {
 				$("#source").text(data);
 				var slideshow = remark.create();
 			});
