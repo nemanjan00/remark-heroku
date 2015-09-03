@@ -115,13 +115,13 @@ $_SERVER['REQUEST_URI'] = htmlentities($_SERVER['REQUEST_URI'])."?".time();
 				height: 92%;
 				float: left;
 			}
-				.left-column h2:last-of-type, .left-column h3:last-child {
-					color: #000;
-				}
+			.left-column h2:last-of-type, .left-column h3:last-child {
+				color: #000;
+			}
 			.right-column {
 				width: 75%;
 				float: right;
-				padding-top: 1em;
+				/* padding-top: 1em; */
 			}
 
 			#source {
