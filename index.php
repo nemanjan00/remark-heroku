@@ -11,7 +11,7 @@ $_SERVER['REQUEST_URI'] = htmlentities($_SERVER['REQUEST_URI'])."?".time();
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Osnove web tehnologija</title>
+	<title><?=getenv("PAGE_TITLE");?></title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="./style.css">	
 	 </head>
