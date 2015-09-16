@@ -1,0 +1,26 @@
+{
+	"name": "remark-heroku",
+	"description": "Hosted remark. ",
+	"repository": "https://github.com/nemanjan00/remark-heroku",
+	"logo": "http://nemanjan00-ediary.herokuapp.com/assets/img/logo.png",
+
+	"env": {
+		"BUILDPACK_URL": "https://github.com/heroku/heroku-buildpack-php.git",
+		"PROJECT_MAIN_FILE": {
+			"description": "Main presentation file. ",
+			"value": "01-uvod.markdown"
+		},
+		"PROJECT_ROOT": {
+			"description": "Root folder of where presentation i stored. ",
+			"value": "https://rawgit.com/nemanjan00/osnove-web-tehnologija/master/"
+		},
+		"PAGE_TITLE": {
+			"description": "Page title. ",
+			"value": "Osnove web tehnologija"
+		}
+	},
+
+	"addons": [
+		"heroku-postgresql"
+	]
+}
