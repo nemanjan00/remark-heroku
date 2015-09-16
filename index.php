@@ -1,6 +1,9 @@
 <?php
+$PROJECT_ROOT = getenv('PROJECT_ROOT');
+$PROJECT_MAIN_FILE = getenv('PROJECT_MAIN_FILE');
+
 if($_SERVER['REQUEST_URI'] == "" || $_SERVER['REQUEST_URI'] == "/"){
-	header("location: /01-uvod.markdown");
+	header("location: /$PROJECT_MAIN_FILE");
 }
 
 $_SERVER['REQUEST_URI'] = htmlentities($_SERVER['REQUEST_URI'])."?".time();
