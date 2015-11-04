@@ -24,8 +24,8 @@ $_SERVER['REQUEST_URI'] = htmlentities($_SERVER['REQUEST_URI'])."?".time();
 			$.get("<?=$PROJECT_ROOT;?>/<?=$_SERVER['REQUEST_URI'];?>", function(data) {
 				$("#source").text(data);
 				var slideshow = remark.create();
-			}).fail(function() {
-			//	window.location = "/";
+			}).fail(function(error) {
+				console.log("error");
 			});
 
 		</script>
