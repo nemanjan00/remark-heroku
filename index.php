@@ -25,7 +25,7 @@ $_SERVER['REQUEST_URI'] = htmlentities($_SERVER['REQUEST_URI'])."?".time();
 				$("#source").text(data);
 				var slideshow = remark.create();
 			}).fail(function(error) {
-				console.log("error");
+				console.log(error);
 			});
 
 		</script>
