@@ -6,7 +6,7 @@ if($_SERVER['REQUEST_URI'] == "" || $_SERVER['REQUEST_URI'] == "/"){
 	header("location: /$PROJECT_MAIN_FILE");
 }
 
-$_SERVER['REQUEST_URI'] = htmlentities($_SERVER['REQUEST_URI'])."?".time();
+$_SERVER['REQUEST_URI'] = htmlentities($_SERVER['REQUEST_URI']);
 ?>
 <!DOCTYPE html>
 <html>
